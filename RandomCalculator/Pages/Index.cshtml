@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <div class="form-row p-3">
+        <label asp-for="MaxWeight">Максимальный вес для одной строчки в кг</label>
+        <input asp-for="MaxWeight" class="form-control" />
+        <span asp-validation-for="MaxWeight" class="text-danger" />
+    </div>
+
+    <div class="form-row p-3">
+        <label asp-for="Price">Цена за 1 кг</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger" />
+    </div>
+
+    <div class="form-group p-3">
+        <label asp-for="RowQuantity">Количество строк</label>
+        <input asp-for="RowQuantity" class="form-control" />
+        <span asp-validation-for="RowQuantity" class="text-danger" />
+    </div>
+
+    <div class="form-group p-3">
+        <label asp-for="TotalWeight">Общая масса в кг</label>
+        <input asp-for="TotalWeight" class="form-control" />
+        <span asp-validation-for="TotalWeight" class="text-danger" />
+    </div>
+
+    <button type="submit" class="btn btn-primary float-right m-3">Сгенерировать файл</button>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"/>
+}
