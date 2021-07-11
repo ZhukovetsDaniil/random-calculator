@@ -31,58 +31,47 @@ namespace RandomCalculator.Infrastructure.Services
             {
                 throw new ArgumentException("Max value cannot be less than averege", nameof(maxValue));
             }
+
             var maxVal = (decimal)maxValue;
 
             var list = new List<decimal>(numberQuantity);
 
-            var middle = Math.Round((decimal)totalSum / numberQuantity, 1);
+            var middle = (int)(totalSum / numberQuantity);
 
-            var limit = maxVal - middle;
+            var error = (decimal)totalSum - middle * numberQuantity;
 
-            var minVal = maxVal - (int)(maxVal / 4);
-
-            for(int i = 0; i < numberQuantity - 1;)
+            for (int i = 0; i < numberQuantity / 2; i++)
             {
-                list.Add(Rand(minVal, maxVal));
+                var tmp = middle * 2;
+                var rnd = Rand(tmp - maxVal, maxVal);
 
-                var error = middle - list[i];
-
-                if (error < limit)
-                {
-                    list.Add(middle + error);
-                    i++;
-                }
-                else
-                {
-                    var tmp = limit * (numberQuantity - list.Count);
-
-                    if (error > tmp)
-                    {
-                        return null;
-                    }
-
-                    var itemError = Math.Round(error / numberQuantity, 1);
-
-                    itemError = Math.Max(0.1m, itemError);
-
-                    i++;
-
-                    for(; i < numberQuantity && error > 0; i++)
-                    {
-                        if (error < limit)
-                        {
-                            list.Add(middle + error);
-                            error = 0;
-                        }
-                        else
-                        {
-                            var curError = Rand(itemError, limit);
-                            list.Add(middle + curError);
-                            error -= curError;
-                        }
-                    }
-                }
+                list.Add(rnd);
+                list.Add(tmp - rnd);
             }
+
+            if (list.Count + 1 == numberQuantity)
+            {
+                list.Add(middle);
+            }
+
+            for (int j = 0; j < 3; j++)
+            {
+                var average = list.Average();
+
+                var itemError = (decimal)Math.Round(error / list.Count(i => i < average), 1);
+
+                for (int i = 0; i < numberQuantity / 2; i++)
+                {
+                    if (list[i] < middle)
+                    {
+                        list[i] += itemError;
+                    }
+                }
+
+                error = (decimal)totalSum - list.Sum();
+            }
+
+            list[^1] += error;
 
             return list;
         }

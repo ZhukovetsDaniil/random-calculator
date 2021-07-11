@@ -1,8 +1,8 @@
-﻿using AutoMapper;
+using AutoMapper;
 using RandomCalculator.Domain.Models;
 using RandomCalculator.Pages;
 
-namespace RandomCalculator.Profiles
+namespace RandomCalculator
 {
     public class ApplicationProfile : Profile
     {

@@ -19,9 +19,9 @@ namespace RandomCalculator.Infrastructure.Tests
 
         }
 
-        [TestCase(45, 45, 2000)]
-        [TestCase(340, 64, 3000)]
-        [TestCase(100, 32, 1000)]
+        [TestCase(45, 54, 2000)]
+        [TestCase(45, 54, 1600)]
+        [TestCase(45, 54, 1800)]
         public void GenerateRandomBySpecifiedSum_TestSum(int quantity, double maxValue, double totalSum)
         {
             var service = new RandomGeneratorService();
@@ -31,9 +31,9 @@ namespace RandomCalculator.Infrastructure.Tests
             
         }
 
-        [TestCase(270, 45, 2000)]
-        [TestCase(340, 64, 3000)]
-        [TestCase(100, 32, 1000)]
+        [TestCase(45, 54, 2000)]
+        [TestCase(45, 54, 1600)]
+        [TestCase(45, 54, 1800)]
         public void GenerateRandomBySpecifiedSum_TestMin(int quantity, double maxValue, double totalSum)
         {
             var service = new RandomGeneratorService();
@@ -42,9 +42,9 @@ namespace RandomCalculator.Infrastructure.Tests
             Assert.Less(0, result.Min());
         }
 
-        [TestCase(270, 45, 2000)]
-        [TestCase(340, 64, 3000)]
-        [TestCase(100, 32, 1000)]
+        [TestCase(45, 54, 2000)]
+        [TestCase(45, 54, 1600)]
+        [TestCase(45, 54, 1800)]
         public void GenerateRandomBySpecifiedSum_TestMax(int quantity, double maxValue, double totalSum)
         {
             var service = new RandomGeneratorService();

@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomCalculator.Domain", "RandomCalculation.Domain\RandomCalculator.Domain.csproj", "{E871F131-04BD-4767-A345-9968AC2821AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomCalculator.Domain", "RandomCalculation.Domain\RandomCalculator.Domain.csproj", "{E871F131-04BD-4767-A345-9968AC2821AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomCalculator", "RandomCalculator\RandomCalculator.csproj", "{6895626C-27D4-4600-95E6-1DC36594DF0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomCalculator.Application", "RandomCalculator.Application\RandomCalculator.Application.csproj", "{5A1CE54B-2F35-4B8E-B393-0F3328B70874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomCalculator.Application", "RandomCalculator.Application\RandomCalculator.Application.csproj", "{5A1CE54B-2F35-4B8E-B393-0F3328B70874}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomCalculator.Infrastructure", "RandomCalculator.Infrastructure\RandomCalculator.Infrastructure.csproj", "{37393587-57ED-46CA-B64E-50056F5F0415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomCalculator.Infrastructure", "RandomCalculator.Infrastructure\RandomCalculator.Infrastructure.csproj", "{37393587-57ED-46CA-B64E-50056F5F0415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomCalculator.Infrastructure.Tests", "RandomCalculator.Infrastructure.Tests\RandomCalculator.Infrastructure.Tests.csproj", "{EAF3EAB3-4AB1-4840-84B8-E7D4767714C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomCalculator.Infrastructure.Tests", "RandomCalculator.Infrastructure.Tests\RandomCalculator.Infrastructure.Tests.csproj", "{EAF3EAB3-4AB1-4840-84B8-E7D4767714C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomCalculator", "RandomCalculator\RandomCalculator.csproj", "{10225B6D-8075-45D3-8181-6F324BEE839A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E871F131-04BD-4767-A345-9968AC2821AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,18 +35,6 @@ Global
 		{E871F131-04BD-4767-A345-9968AC2821AD}.Release|x64.Build.0 = Release|Any CPU
 		{E871F131-04BD-4767-A345-9968AC2821AD}.Release|x86.ActiveCfg = Release|Any CPU
 		{E871F131-04BD-4767-A345-9968AC2821AD}.Release|x86.Build.0 = Release|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Debug|x64.Build.0 = Debug|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Debug|x86.Build.0 = Debug|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Release|x64.ActiveCfg = Release|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Release|x64.Build.0 = Release|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Release|x86.ActiveCfg = Release|Any CPU
-		{6895626C-27D4-4600-95E6-1DC36594DF0D}.Release|x86.Build.0 = Release|Any CPU
 		{5A1CE54B-2F35-4B8E-B393-0F3328B70874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5A1CE54B-2F35-4B8E-B393-0F3328B70874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A1CE54B-2F35-4B8E-B393-0F3328B70874}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -86,5 +71,23 @@ Global
 		{EAF3EAB3-4AB1-4840-84B8-E7D4767714C1}.Release|x64.Build.0 = Release|Any CPU
 		{EAF3EAB3-4AB1-4840-84B8-E7D4767714C1}.Release|x86.ActiveCfg = Release|Any CPU
 		{EAF3EAB3-4AB1-4840-84B8-E7D4767714C1}.Release|x86.Build.0 = Release|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Debug|x64.Build.0 = Debug|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Debug|x86.Build.0 = Debug|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Release|x64.ActiveCfg = Release|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Release|x64.Build.0 = Release|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Release|x86.ActiveCfg = Release|Any CPU
+		{10225B6D-8075-45D3-8181-6F324BEE839A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CCA47E0-4D5F-40E8-B22F-B7014C62EF99}
 	EndGlobalSection
 EndGlobal
