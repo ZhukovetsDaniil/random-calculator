@@ -42,11 +42,13 @@ namespace RandomCalculator.Pages
 
         public async Task<IActionResult> OnPost()
         {
-            var stream = await _randomFileGenerator.GenerateRandomSumFile(_mapper.Map<RandomCalculateInfo>(this));
+            var info = _mapper.Map<RandomCalculateInfo>(this);
+
+            var stream = await _randomFileGenerator.GenerateRandomSumFile(info);
 
             return new FileStreamResult(stream, "text/plain")
             {
-                FileDownloadName = "test.txt"
+                FileDownloadName = $"numbers({info.TotalWeight}).txt"
             };
         }
     }
