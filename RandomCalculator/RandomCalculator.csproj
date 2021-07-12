@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RandomCalculator.Application\RandomCalculator.Application.csproj" />
     <ProjectReference Include="..\RandomCalculator.Infrastructure\RandomCalculator.Infrastructure.csproj" />
+    <ProjectReference Include="..\RandomCalculation.Domain\RandomCalculator.Domain.csproj" />
   </ItemGroup>
 
 </Project>

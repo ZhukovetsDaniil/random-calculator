@@ -1,6 +1,4 @@
 using AutoMapper;
-using RandomCalculator.Domain.Models;
-using RandomCalculator.Pages;
 
 namespace RandomCalculator
 {
@@ -8,7 +6,6 @@ namespace RandomCalculator
     {
         public ApplicationProfile()
         {
-            CreateMap<IndexModel, RandomCalculateInfo>();
         }
     }
 }

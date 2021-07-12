@@ -19,7 +19,7 @@ namespace RandomCalculator
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddControllersWithViews();
             services.AddTransient<IRandomGenerator, RandomGeneratorService>();
             services.AddTransient<IRandomFileGenerator, RandomFileGenerator>();
             services.AddAutoMapper(typeof(ApplicationProfile));
@@ -44,7 +44,9 @@ namespace RandomCalculator
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=RandomGenerator}/{action=Index}/{id?}");
             });
         }
     }
